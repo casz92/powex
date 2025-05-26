@@ -1,0 +1,19 @@
+[package]
+name = "powex_nif"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "powex_nif"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.34.0"
+sha2 = "0.10.8"
+hex = "0.4.3"
+rayon = "1.8.0"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
