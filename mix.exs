@@ -1,10 +1,12 @@
 defmodule Powex.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :powex,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.14",
       description: "Proof of Work implementation in Rust for Elixir",
       package: package(),
@@ -33,7 +35,8 @@ defmodule Powex.MixProject do
       licenses: ["MIT"],
       links: %{
         "GitHub" => "https://github.com/casz92/powex"
-      }
+      },
+      files: ~w(lib mix.exs README.md LICENSE)
     ]
   end
 end
