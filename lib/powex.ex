@@ -9,8 +9,7 @@ defmodule Powex do
   use Rustler,
     otp_app: :powex,
     crate: "powex_nif",
-    path: "native/powex_nif",
-    mode: :debug
+    path: "native/powex_nif"
 
   @doc """
   Computes a Proof of Work nonce for the given data and difficulty.
