@@ -1,7 +1,7 @@
 defmodule Powex.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -36,7 +36,7 @@ defmodule Powex.MixProject do
       links: %{
         "GitHub" => "https://github.com/casz92/powex"
       },
-      files: ~w(lib mix.exs README.md LICENSE)
+      files: ~w(lib native mix.exs README* LICENSE*)
     ]
   end
 end
