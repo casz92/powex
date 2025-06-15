@@ -16,9 +16,7 @@ defmodule Powex.MixProject do
   end
 
   def application do
-    [
-      extra_applications: [:logger]
-    ]
+    []
   end
 
   defp deps do
@@ -33,9 +31,7 @@ defmodule Powex.MixProject do
       name: "powex",
       maintainers: ["Carlos Suarez"],
       licenses: ["MIT"],
-      links: %{
-        "GitHub" => "https://github.com/casz92/powex"
-      },
+      links: %{"GitHub" => "https://github.com/casz92/powex"},
       files: ~w(lib native mix.exs README* LICENSE*)
     ]
   end
