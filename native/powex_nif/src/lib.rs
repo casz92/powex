@@ -23,12 +23,15 @@ fn compute_hash(data: &[u8], nonce: u64) -> String {
 
 /// Checks if hash meets the difficulty requirement (leading zeros)
 fn meets_difficulty(hash: &str, difficulty: u32) -> bool {
-    if difficulty == 0 {
-        return true;
-    }
-
     let required_zeros = difficulty as usize;
-    hash.chars().take(required_zeros).all(|c| c == '0')
+
+    let prefix: String = hash.chars().take(required_zeros).collect();
+    let next_char = hash.chars().nth(required_zeros);
+
+    match next_char {
+        Some(c) => prefix.chars().all(|x| x == '0') && c != '0',
+        None => prefix.chars().all(|x| x == '0')
+    }
 }
 
 /// Single-threaded Proof of Work computation

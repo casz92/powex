@@ -18,7 +18,7 @@ Add `powex` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:powex, "~> 0.1.0"}
+    {:powex, "~> 0.1.2"}
   ]
 end
 ```
